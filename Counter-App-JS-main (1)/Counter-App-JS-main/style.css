@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 62.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Orbitron';
+}
+
+/*------------------------------*/
+
+#title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 55vw;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    
+}
+
+h1, h2 {
+    color: white;
+}
+
+
+
+#general-wrapper {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-size: 2rem;
+
+
+
+}
+
+#counter-indicator-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    gap: 1rem;
+}
+
+
+
+#counter {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    font-size: 7rem;
+    margin: 4rem;
+    border: 1px solid black;
+
+}
+
+.indicator {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+#decrease-box {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 10rem;
+    border-top-left-radius: 100px;
+    box-shadow: 1px solid black;
+
+
+}
+
+#decrease-box p {
+    color: white;
+}
+
+
+
+#reset-box {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 10rem;
+
+}
+
+#reset-box p {
+    color: white;
+    font-size: 2rem;
+}
+
+#increase-box {
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 10rem;
+    border-top-right-radius: 100px;
+}
+
+#increase-box p {
+    color: white;
+    font-size: 2rem;
+}
+
+ad {
+    background-color: rgba(0, 0, 0, 0);
+}

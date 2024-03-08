@@ -1,0 +1,756 @@
+/*----------------------------------------------------------*/
+
+/*GENERAL*/
+
+html {
+    font-size: 62.5%;
+    font-family: 'Orbitron';
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(231,225,222);
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width:1248px;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+/*----------------------------------------------------------*/
+/*NAVBAR*/
+
+nav {
+    position: fixed;  /*make navbar sticky*/
+    top: 0;
+    width: 100%;
+    height: 10%;
+    padding-top: 1rem;
+    padding-bottom: 1rem ;
+    z-index: 9999999999999999999999999999999999999999999999; /* Make sure it's above other elements */
+    background-color: rgba(255, 255, 255, 0.4); /* Transparent background */
+    margin-top: 1.8em;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
+  }
+
+nav #left-nav {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+nav #right-nav {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+}
+
+.logo {
+height: 100%;
+margin: 0 8%;
+}
+    
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+a:hover {
+    color:rgb(255, 1, 245); /*FF01F5*/
+}
+
+
+nav ul {
+    display: flex;
+    gap: 2.4vw;
+}
+
+nav ul li {
+    font-size: 1.4vw;
+}
+
+
+
+/*------------------------------------------------------------------------------*/
+/*LANDING PAGE HERO SECTON*/
+
+#landing-page .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 5.6vh;
+    font-weight: bolder;
+    color: rgb(255, 1, 245);
+    margin: 0;
+    
+}
+
+h3 {
+    font-size: 3.5vw;
+    font-weight: bold;
+    color: white;
+    
+}
+
+.hero-text {
+    text-transform: uppercase;
+}
+
+#landing-page {
+    background: rgb(231,225,222);
+    background: linear-gradient(221deg, rgba(231,225,222,1) 35%, rgba(113,247,255,1) 100%);
+    height: 90vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hero-section {
+
+/*Size & Position the Div + style*/    
+width: 100%;
+height: 64vh;
+margin-top: 5em;
+border-radius: 50px;
+background: rgb(253, 253, 253);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+
+/*Relative to Child Elements*/
+display: flex;
+flex-direction: row;
+
+}
+
+.img-wrapper {
+
+width: fit-content;
+
+
+    
+}
+
+  .img-wrapper img {
+    width: 35vw;
+    height: 70vh;
+
+    margin-top: 0;
+    margin-left: 0 ;
+    max-width: 600px; /* Set a maximum width for the image wrapper */
+    overflow-y: hidden;
+    border-radius: 50px;
+    object-fit: cover;
+    
+
+    max-width: 100%; /* Make the image responsive */
+    border-radius: 50px;
+    
+    
+}
+
+/*CONTENT BOX IN HERO BANNER*/
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 3em;
+    margin-right: 9em;
+}
+
+/*HERO TEXT*/
+
+.content-box p, h2 {
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+
+/* CTA BUTTON 'Meet Me'*/
+
+.cta-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.cta-button p {
+    color: white;
+    background-color: black;
+    font-size: 1.4vw;
+    font-weight: bold;
+    padding: 1.5vh 3.5vw;
+    border-radius: 100px;
+    
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    text-shadow: 0px 4px 4px rgba(0, 0, 0.25);
+
+
+}
+
+.cta-button p:hover {
+    background-color: rgb(255, 1, 245);
+}
+
+.button-wrapper {
+
+    margin-top: 4em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------*/
+/*ABOUT*/
+
+#japanese-text {
+    position: absolute;
+    transform: rotate(180deg);
+    color: rgb(109, 45, 119);
+}
+
+#about {
+
+    background: rgb(0, 0, 0);
+    height: fit-content;
+    width: 100vw;
+}
+
+
+#about p {
+    color: white;
+}
+
+.about-header {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+    text-transform: uppercase;
+
+
+
+}
+
+#about h3 {
+    margin-left: 20vw;
+}
+
+#about .color-line {
+    height: 2vw;
+    width: 56vw;
+    background: rgb(255,1,245);
+    background: linear-gradient(90deg, rgba(255,1,245,1) 0%, rgba(33,242,243,1) 100%);
+
+    transition: width 1s; /* Add transition for a smooth animation */
+}
+
+#animated-line.appear {
+    width: 56vw; /* Final width set to 56vw */
+  }
+
+/*ABOUT TEXT*/
+
+#about .text-wrapper {
+    width: fit-content;
+    margin-left: 1vw;
+    
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#about p {
+    padding-right: 10vw;
+    margin-left: 1vw;
+    width: fit-content;
+    
+}
+
+#about #p1 {
+    font-size: 2vw;
+}
+#about #p2 {
+    font-size: 1.7vw;
+}
+#about #p3 {
+    font-size: 1.4vw;
+}
+
+#about #li {
+    gap: 100vh;
+}
+
+#about .bullet-points {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15vw;
+}
+
+.rectangle {
+    margin-top: 1vh;
+    background-color: white;
+    width: 2vw;
+    height: 3vh;
+
+
+}
+
+.about-content {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+#about .content-1-wrapper, .content-2-wrapper, .content-3-wrapper {
+
+display: flex;
+flex-direction: row;
+margin-bottom: 8vh;
+margin-left: 15vw;
+
+
+}
+
+#about .content-1-wrapper p {
+    font-size: 4rem
+}
+
+/*GLITCH TRANSITION TOP*/
+
+#glitch-transition-top {
+    z-index: 999999999999999999999999999999999999999999999999999999;
+    width: 100vw;
+    float: inline-end;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------*/
+/*SKILLS*/
+
+.glitch-box {
+    position: absolute;
+    
+}
+
+#anchor-target-skills {
+    position: absolute;
+    height: 10em;
+    width: 10em;
+    /*background-color: red;*/
+    z-index: 1000000000000000000000000000000000000;
+    margin-top: -9%;
+
+}
+
+#skills p {
+    font-size: 3.2rem;
+    
+}
+
+#skills h3 {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#upper-city {
+    transform: rotate(180deg); /* Flip the image upside down */
+    width: 100vw;
+    position: static;
+}
+
+#lower-city {
+    width: 100vw;
+    position: static;
+}
+
+#languages-wrapper {
+background-color: rgb(253,252,253);
+width: 100vw;
+min-height: 50vh;
+display: flex;
+flex-direction: row;
+}
+
+#first-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#seccond-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#first-row img {
+    width: 8vw;
+}
+
+
+#seccond-row img {
+    width: 8vw;
+}
+
+#skills {
+    background: rgb(253,253,253);
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#skills h3 {
+    color: black;
+    z-index: 9999999999999999999;
+    transform: translateY(-200%);
+}
+
+#first-row .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4vw;
+}
+
+#seccond-row .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4vw;
+}
+
+.css-wrapper {
+    margin-left: -500vw;
+}
+
+/*---------------------------------------------------------------------*/
+/*PROJECTS*/
+
+#color-line-projects {
+    height: 2vw;
+    width: 56vw;
+    background: linear-gradient(90deg, rgb(1, 255, 209), rgb(251, 245, 3,1));
+}
+
+#color-line-projects-wrapper {
+    display: flex;
+    align-items: center;
+
+
+}
+
+#projects {
+    background: black;
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#project-number {
+    color: white;
+    font-size: 12vw;
+    font-weight: bolder;
+    margin-right: 2vw;
+}
+
+#project-name-box {
+    font-size: 2.8vw;
+    font-weight: 400;
+    width:40vw;
+    height: 20vh;
+    background-color: rgb(217, 217, 217);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+#project-content {
+    width: 57vw;
+    height: 50vh;
+    background-color: rgb(217, 217, 217);
+    margin: 1px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    flex-direction: row;
+
+}
+#project-image {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+#project-image img {
+    width: 30vw;
+}
+
+#number-name-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#project-cta-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#project-cta-button p {
+    color: white;
+    background-color: black;
+    font-size: 1.4vw;
+    font-weight: bold;
+    padding: 1.5vh 3.5vw;
+    border-radius: 100px;
+    
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    text-shadow: 0px 4px 4px rgba(0, 0, 0.25);
+
+    
+
+
+
+}
+
+#project-cta-button p:hover {
+    background-color: rgb(255, 1, 245);
+}
+
+#text-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3vw;
+}
+
+#text-button-wrapper p {
+    font-size: 1.3vw;
+    margin-bottom: 5vh;
+}
+
+
+/*---------------------------------------------------------------------*/
+/*CONTACT ME*/
+
+/*---------------------------------------------------------------------*/
+/*FOOTER*/
+
+/*NEW SKILLS SECTION*/
+
+/* NEW SKILLS SECTION */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NEW SKILLS SECTION */
+
+#new-skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#new-skills-section #background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#new-skills-section #top-city {
+    position: relative;
+    width: 100vw;
+    height: 122vh;
+    background-image: url(../Media/city-upper.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+}
+
+#new-skills-section #top-city #glitch-top {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+#new-skills-section #central-section {
+    height: fit-content;
+    width: 100%;
+    background-color: rgb(251,252,252);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3vw;
+    font-weight:400;
+
+}
+
+#new-skills-section #central-section h3 {
+    color: black;
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+#new-skills-section #central-section #first-row {
+    margin-bottom: 10vh;
+}
+
+#new-skills-section #bot-city {
+    position: relative;
+    width: 100vw;
+    height: 122vh;
+    background-image: url(../Media/city-lower.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#new-skills-section #bot-city #glitch-bot {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    transform: rotate(180deg);
+
+}
+
+
+#projects-content {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+
+#color-line-projects-wrapper h3 {
+    margin-left: 3vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
